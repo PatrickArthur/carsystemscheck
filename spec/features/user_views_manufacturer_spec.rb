@@ -8,6 +8,6 @@ feature 'user visits manufacturer index' do
     visit '/manufacturers'
 
     expect(page).to have_content "GM"
-    expect(page).to have_content "Italy"
+    expect(page).to have_content "US"
   end
 end

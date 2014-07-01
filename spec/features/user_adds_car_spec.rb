@@ -29,7 +29,7 @@ feature "User adds new car info" do
     click_button "Submit"
 
 
-    expect(page).to have_content("Your Car couldn't be saved")
+    expect(page).to have_content("Your car couldn't be saved.")
 
   end
 
