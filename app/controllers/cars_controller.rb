@@ -20,7 +20,7 @@ class CarsController < ApplicationController
       flash[:notice] = "Success!"
       redirect_to '/cars'
     else
-      flash.now[:notice] = "Your Car couldn't be saved."
+      flash.now[:notice] = "Your car couldn't be saved."
       render :new
     end
   end

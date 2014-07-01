@@ -10,7 +10,7 @@ feature "User adds new manufacturer" do
     visit new_manufacturer_path
 
     fill_in "Name", with: manufacturer.name
-    find_field('Country').value
+    select 'Italy', from: 'manufacturer[country]'
 
     click_button "Submit"
 

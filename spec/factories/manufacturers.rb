@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :manufacturer do
     name "GM"
-    country "Italy"
+    country "US"
   end
 end
 
