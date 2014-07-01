@@ -5,13 +5,15 @@ feature "User adds new manufacturer" do
 
   scenario "fill out new manufacturer form" do
 
-    car = FactoryGirl.create(:manufacturer)
+    manufacturer= FactoryGirl.create(:manufacturer)
 
     visit new_manufacturer_path
 
     fill_in "Name", with: manufacturer.name
-    fill_in "Country", with: manufacturer.Country
-    click_button "Add Manufacturer"
+    find_field('Country').value
+
+    click_button "Submit"
+
 
     expect(page).to have_content("Success!")
 
@@ -23,7 +25,7 @@ feature "User adds new manufacturer" do
     visit new_manufacturer_path
 
 
-    click_button "Add manufacturer"
+    click_button "Submit"
 
 
     expect(page).to have_content("Your manufacturer couldn't be saved.")

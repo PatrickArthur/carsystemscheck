@@ -1,0 +1,7 @@
+<% @cars.each do |car| %>
+      <%= link_to car.manufacturer, manufacturer_path(cmanufacturer.id)%>
+      <%= car.color %>
+      <%= car.year %>
+      <%= car.mileage %>
+      <%= car.description %>
+<% end %>

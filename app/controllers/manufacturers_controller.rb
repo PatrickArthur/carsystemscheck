@@ -1,12 +1,11 @@
 class ManufacturersController < ApplicationController
-  include ActionView::Helpers::TextHelper
 
   def index
     @manufacturers = Manufacturer.all
   end
 
   def show
-    @anufacturer = Manufacturer.find(params[:id])
+    @manufacturer = Manufacturer.find(params[:id])
   end
 
 
@@ -27,9 +26,8 @@ class ManufacturersController < ApplicationController
   end
 
 
-
   private
     def manufacturer_params
-      params.require(:post).permit(:name,:country)
+      params.require(:manufacturer).permit(:name,:country)
     end
 end

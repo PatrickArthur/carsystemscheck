@@ -1,0 +1,6 @@
+<% @manufacturers.each do |manufacturer| %>
+      <%= link_to manufacturer.name, manufacturer_path(manufacturer.id)%>
+      <%= manufacturer.country %>
+
+
+<% end %>

@@ -1,0 +1,31 @@
+<h2> Add a new Car! </h2>
+
+<ul>
+  <% if @car.errors.any? %>
+     <% @car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+     <% end %>
+  <% end %>
+</ul>
+
+<%= form_for @car do |f| %>
+
+<%= f.label :manufacturer %>
+<%= f.text_field :manufacturer ,placeholder: "GM" %>
+
+<%= f.label :color %>
+<%= f.text_field :color ,placeholder: "Blue" %>
+
+<%= f.label :year %>
+<%= f.number_field :year %>
+
+<%= f.label :mileage %>
+<%= f.number_field :mileage %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.submit 'Submit'%>
+
+
+<% end %>

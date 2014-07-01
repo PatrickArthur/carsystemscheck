@@ -1,0 +1,23 @@
+
+<h2> Add a new Manufacturer! </h2>
+
+<ul>
+  <% if @manufacturer.errors.any? %>
+     <% @manufacturer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+     <% end %>
+  <% end %>
+</ul>
+
+<%= form_for @manufacturer do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name ,placeholder: "GM" %>
+
+<%= f.label :country %><br />
+<%= f.country_select :country, {priority: %w(US CA), prompt: 'Please select a country'} %>
+
+<%= f.submit 'Submit'%>
+
+
+<% end %>
