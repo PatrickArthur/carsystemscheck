@@ -1,8 +1,13 @@
-<h4>Add Carss</h4>
-<p><% @cars.each do |car| %></p>
-<p><%= car.manufacturer%></p>
-<p><%= car.color %></p>
-<p><%= car.year %></p>
-<p><%= car.mileage %></p>
-<p><%= car.description %></p>
+<h4>List of Cars</h4>
+<% @cars.each do |car| %>
+<p>Manufacturer:<%= link_to car.manufacturer, car_path(car.id)%></p>
+<p>Color:<%= car.color %></p>
+<p>Year:<%= car.year %></p>
+<p>Mileage:<%= car.mileage %></p>
+<p>Description:<%= car.description %></p></br><hr>
 <% end %>
+
+<%= link_to "Add a Car", new_car_path %></br>
+<%= link_to "Add a Manufacturer", new_manufacturer_path %></br>
+<%= link_to "List of Manufacturers", manufacturers_path %>
+

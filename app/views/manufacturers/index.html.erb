@@ -1,8 +1,12 @@
-<h4>Add Manufacturers</h4>
+<h4>List of Manufacturers</h4>
 <% @manufacturers.each do |manufacturer| %>
 
-<p><%= link_to manufacturer.name, manufacturer_path(manufacturer.id)%></p>
-<p><%= manufacturer.country %></p>
+<p>Manufacturer:<%= link_to manufacturer.name, manufacturer_path(manufacturer.id)%></p>
+<p>Country:<%= manufacturer.country %></p></br><hr>
 
 
 <% end %>
+
+<%= link_to "My Turn to Add a Manufacturer", new_manufacturer_path %></br>
+<%= link_to "My Turn to Add a Car", new_car_path %></br>
+<%= link_to "List of Cars", cars_path %>

@@ -17,7 +17,9 @@
 <%= f.label :country %><br />
 <%= f.country_select :country, {priority: %w(US CA), prompt: 'Please select a country'} %>
 
-<%= f.submit 'Submit'%>
+<%= f.submit 'Submit'%></br><hr>
 
 
 <% end %>
+
+ <%= link_to 'Cancel', manufacturers_path %>
