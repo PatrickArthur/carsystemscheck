@@ -13,9 +13,10 @@ feature "User adds new car info" do
     fill_in "Color", with: car.color
     fill_in "Year", with: car.year
     fill_in "Mileage", with: car.mileage
-    click_button "Add Car"
+    click_button "Submit"
 
-    expect(page).to have_content("Succesfully added new car")
+
+    expect(page).to have_content("Success!")
 
 
   end
@@ -25,10 +26,10 @@ feature "User adds new car info" do
     visit new_car_path
 
 
-    click_button "Add Car"
+    click_button "Submit"
 
 
-    expect(page).to have_content("Did not add car")
+    expect(page).to have_content("Your Car couldn't be saved")
 
   end
 

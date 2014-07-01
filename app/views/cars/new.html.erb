@@ -11,21 +11,21 @@
 <%= form_for @car do |f| %>
 
 <%= f.label :manufacturer %>
-<%= f.text_field :manufacturer ,placeholder: "GM" %>
+<p><%= f.text_field :manufacturer ,placeholder: "GM" %></p>
 
 <%= f.label :color %>
-<%= f.text_field :color ,placeholder: "Blue" %>
+<p><%= f.text_field :color ,placeholder: "Blue" %></p>
 
 <%= f.label :year %>
-<%= f.number_field :year %>
+<p><%= f.number_field :year %></p>
 
 <%= f.label :mileage %>
-<%= f.number_field :mileage %>
+<p><%= f.number_field :mileage %></p>
 
 <%= f.label :description %>
-<%= f.text_field :description %>
+<p><%= f.text_field :description %></p>
 
-<%= f.submit 'Submit'%>
+<p><%= f.submit 'Submit'%></p>
 
 
 <% end %>

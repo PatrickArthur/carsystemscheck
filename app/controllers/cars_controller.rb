@@ -18,7 +18,7 @@ class CarsController < ApplicationController
 
     if @car.save
       flash[:notice] = "Success!"
-      redirect_to '/Cars'
+      redirect_to '/cars'
     else
       flash.now[:notice] = "Your Car couldn't be saved."
       render :new
@@ -27,7 +27,7 @@ class CarsController < ApplicationController
 
 
   private
-    def Car_params
-      params.require(:Car).permit(:manufacturer,:color,:year,:mileage)
+    def car_params
+      params.require(:car).permit(:manufacturer,:color,:year,:mileage)
     end
 end
