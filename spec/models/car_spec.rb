@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Car, :type => :model do
+  it 'has a manufacturer' do
+    car = FactoryGirl.create(:car)
+    manufacturer = car.manufacturer
 
-  it { should have_valid(:manufacturer).when('GM')}
-  it { should_not have_valid(:manufacturer).when(nil,'')}
+    expect(car.manufacturer.class).to eq Manufacturer
+  end
 
   it { should have_valid(:color).when('Blue')}
   it { should_not have_valid(:color).when(nil,'')}

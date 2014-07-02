@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :car do
-    manufacturer "GM"
+    manufacturer
+
     color "Blue"
     year 1950
     mileage 10000

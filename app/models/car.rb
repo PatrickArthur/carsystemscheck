@@ -1,4 +1,6 @@
 class Car < ActiveRecord::Base
+  belongs_to :manufacturer
+
   validates_presence_of :manufacturer
   validates_presence_of :color
   validates_presence_of :year
