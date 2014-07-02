@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'user visits individual manufacturer page' do
-
   scenario "user sees manufacturer information" do
     manufacturer = FactoryGirl.create(:manufacturer)
 
