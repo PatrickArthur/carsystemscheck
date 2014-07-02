@@ -1,6 +1,8 @@
 class Manufacturer < ActiveRecord::Base
   has_many :cars
 
-  validates_presence_of :name
-  validates_presence_of :country
+  validates :name, presence: true
+  validates :country,
+    presence: true,
+    uniqueness: { scope: :name }
 end
