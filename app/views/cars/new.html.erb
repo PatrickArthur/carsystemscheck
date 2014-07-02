@@ -11,7 +11,7 @@
 <%= form_for @car do |f| %>
 
 <%= f.label :manufacturer %>
-<p><%= f.text_field :manufacturer ,placeholder: "GM" %></p>
+<p><%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %></p>
 
 <%= f.label :color %>
 <p><%= f.text_field :color ,placeholder: "Blue" %></p>

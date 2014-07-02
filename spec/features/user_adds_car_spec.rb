@@ -8,8 +8,7 @@ feature "User adds new car info" do
     car = FactoryGirl.create(:car)
 
     visit new_car_path
-
-    fill_in "Manufacturer", with: car.manufacturer
+    select car.manufacturer.name, from: "car[manufacturer_id]"
     fill_in "Color", with: car.color
     fill_in "Year", with: car.year
     fill_in "Mileage", with: car.mileage
