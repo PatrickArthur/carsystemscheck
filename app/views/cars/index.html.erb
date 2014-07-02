@@ -1,6 +1,6 @@
 <h4>List of Cars</h4>
 <% @cars.each do |car| %>
-<p>Manufacturer:<%= link_to car.manufacturer, car_path(car.id)%></p>
+<p>Manufacturer:<%= link_to car.manufacturer.name, car_path(car.id)%></p>
 <p>Color:<%= car.color %></p>
 <p>Year:<%= car.year %></p>
 <p>Mileage:<%= car.mileage %></p>
