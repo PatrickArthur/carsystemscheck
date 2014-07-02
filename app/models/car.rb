@@ -1,9 +1,16 @@
 class Car < ActiveRecord::Base
   belongs_to :manufacturer
 
-  validates_presence_of :manufacturer
-  validates_presence_of :color
-  validates_presence_of :year
-  validates_numericality_of :year, greater_than_or_equal_to: 1920
-  validates_presence_of :mileage
+  validates :manufacturer, presence: true
+  validates :color, presence: true
+  validates :year, presence: true
+  validates :year,
+    numericality: {
+      greater_than_or_equal_to: 1920,
+      less_than_or_equal_to: Time.now.year
+    }
+  validates :mileage,
+    numericality: {
+      greater_than_or_equal_to: 0
+    }
 end
